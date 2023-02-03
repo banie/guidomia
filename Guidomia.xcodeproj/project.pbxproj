@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55FB9B22298DA397007F814F /* GuidomiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B21298DA397007F814F /* GuidomiaApp.swift */; };
+		55FB9B24298DA397007F814F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B23298DA397007F814F /* ContentView.swift */; };
+		55FB9B26298DA398007F814F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FB9B25298DA398007F814F /* Assets.xcassets */; };
+		55FB9B29298DA398007F814F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FB9B28298DA398007F814F /* Preview Assets.xcassets */; };
+		55FB9B2B298DA398007F814F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B2A298DA398007F814F /* Persistence.swift */; };
+		55FB9B2E298DA398007F814F /* Guidomia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B2C298DA398007F814F /* Guidomia.xcdatamodeld */; };
+		55FB9B38298DA399007F814F /* GuidomiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B37298DA399007F814F /* GuidomiaTests.swift */; };
+		55FB9B42298DA399007F814F /* GuidomiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B41298DA399007F814F /* GuidomiaUITests.swift */; };
+		55FB9B44298DA399007F814F /* GuidomiaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B43298DA399007F814F /* GuidomiaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55FB9B34298DA399007F814F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55FB9B16298DA397007F814F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55FB9B1D298DA397007F814F;
+			remoteInfo = Guidomia;
+		};
+		55FB9B3E298DA399007F814F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55FB9B16298DA397007F814F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55FB9B1D298DA397007F814F;
+			remoteInfo = Guidomia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55FB9B1E298DA397007F814F /* Guidomia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidomia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FB9B21298DA397007F814F /* GuidomiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaApp.swift; sourceTree = "<group>"; };
+		55FB9B23298DA397007F814F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		55FB9B25298DA398007F814F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55FB9B28298DA398007F814F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		55FB9B2A298DA398007F814F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		55FB9B2D298DA398007F814F /* Guidomia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Guidomia.xcdatamodel; sourceTree = "<group>"; };
+		55FB9B33298DA399007F814F /* GuidomiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuidomiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FB9B37298DA399007F814F /* GuidomiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaTests.swift; sourceTree = "<group>"; };
+		55FB9B3D298DA399007F814F /* GuidomiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuidomiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FB9B41298DA399007F814F /* GuidomiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaUITests.swift; sourceTree = "<group>"; };
+		55FB9B43298DA399007F814F /* GuidomiaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55FB9B1B298DA397007F814F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FB9B30298DA399007F814F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FB9B3A298DA399007F814F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55FB9B15298DA397007F814F = {
+			isa = PBXGroup;
+			children = (
+				55FB9B20298DA397007F814F /* Guidomia */,
+				55FB9B36298DA399007F814F /* GuidomiaTests */,
+				55FB9B40298DA399007F814F /* GuidomiaUITests */,
+				55FB9B1F298DA397007F814F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55FB9B1F298DA397007F814F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B1E298DA397007F814F /* Guidomia.app */,
+				55FB9B33298DA399007F814F /* GuidomiaTests.xctest */,
+				55FB9B3D298DA399007F814F /* GuidomiaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55FB9B20298DA397007F814F /* Guidomia */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B21298DA397007F814F /* GuidomiaApp.swift */,
+				55FB9B23298DA397007F814F /* ContentView.swift */,
+				55FB9B25298DA398007F814F /* Assets.xcassets */,
+				55FB9B2A298DA398007F814F /* Persistence.swift */,
+				55FB9B2C298DA398007F814F /* Guidomia.xcdatamodeld */,
+				55FB9B27298DA398007F814F /* Preview Content */,
+			);
+			path = Guidomia;
+			sourceTree = "<group>";
+		};
+		55FB9B27298DA398007F814F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B28298DA398007F814F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		55FB9B36298DA399007F814F /* GuidomiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B37298DA399007F814F /* GuidomiaTests.swift */,
+			);
+			path = GuidomiaTests;
+			sourceTree = "<group>";
+		};
+		55FB9B40298DA399007F814F /* GuidomiaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B41298DA399007F814F /* GuidomiaUITests.swift */,
+				55FB9B43298DA399007F814F /* GuidomiaUITestsLaunchTests.swift */,
+			);
+			path = GuidomiaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55FB9B1D298DA397007F814F /* Guidomia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FB9B47298DA399007F814F /* Build configuration list for PBXNativeTarget "Guidomia" */;
+			buildPhases = (
+				55FB9B1A298DA397007F814F /* Sources */,
+				55FB9B1B298DA397007F814F /* Frameworks */,
+				55FB9B1C298DA397007F814F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Guidomia;
+			productName = Guidomia;
+			productReference = 55FB9B1E298DA397007F814F /* Guidomia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55FB9B32298DA399007F814F /* GuidomiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FB9B4A298DA399007F814F /* Build configuration list for PBXNativeTarget "GuidomiaTests" */;
+			buildPhases = (
+				55FB9B2F298DA399007F814F /* Sources */,
+				55FB9B30298DA399007F814F /* Frameworks */,
+				55FB9B31298DA399007F814F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55FB9B35298DA399007F814F /* PBXTargetDependency */,
+			);
+			name = GuidomiaTests;
+			productName = GuidomiaTests;
+			productReference = 55FB9B33298DA399007F814F /* GuidomiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		55FB9B3C298DA399007F814F /* GuidomiaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FB9B4D298DA399007F814F /* Build configuration list for PBXNativeTarget "GuidomiaUITests" */;
+			buildPhases = (
+				55FB9B39298DA399007F814F /* Sources */,
+				55FB9B3A298DA399007F814F /* Frameworks */,
+				55FB9B3B298DA399007F814F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55FB9B3F298DA399007F814F /* PBXTargetDependency */,
+			);
+			name = GuidomiaUITests;
+			productName = GuidomiaUITests;
+			productReference = 55FB9B3D298DA399007F814F /* GuidomiaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55FB9B16298DA397007F814F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					55FB9B1D298DA397007F814F = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					55FB9B32298DA399007F814F = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 55FB9B1D298DA397007F814F;
+					};
+					55FB9B3C298DA399007F814F = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 55FB9B1D298DA397007F814F;
+					};
+				};
+			};
+			buildConfigurationList = 55FB9B19298DA397007F814F /* Build configuration list for PBXProject "Guidomia" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55FB9B15298DA397007F814F;
+			productRefGroup = 55FB9B1F298DA397007F814F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55FB9B1D298DA397007F814F /* Guidomia */,
+				55FB9B32298DA399007F814F /* GuidomiaTests */,
+				55FB9B3C298DA399007F814F /* GuidomiaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55FB9B1C298DA397007F814F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FB9B29298DA398007F814F /* Preview Assets.xcassets in Resources */,
+				55FB9B26298DA398007F814F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FB9B31298DA399007F814F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FB9B3B298DA399007F814F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55FB9B1A298DA397007F814F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FB9B2E298DA398007F814F /* Guidomia.xcdatamodeld in Sources */,
+				55FB9B2B298DA398007F814F /* Persistence.swift in Sources */,
+				55FB9B24298DA397007F814F /* ContentView.swift in Sources */,
+				55FB9B22298DA397007F814F /* GuidomiaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FB9B2F298DA399007F814F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FB9B38298DA399007F814F /* GuidomiaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FB9B39298DA399007F814F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FB9B44298DA399007F814F /* GuidomiaUITestsLaunchTests.swift in Sources */,
+				55FB9B42298DA399007F814F /* GuidomiaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55FB9B35298DA399007F814F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55FB9B1D298DA397007F814F /* Guidomia */;
+			targetProxy = 55FB9B34298DA399007F814F /* PBXContainerItemProxy */;
+		};
+		55FB9B3F298DA399007F814F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55FB9B1D298DA397007F814F /* Guidomia */;
+			targetProxy = 55FB9B3E298DA399007F814F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		55FB9B45298DA399007F814F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55FB9B46298DA399007F814F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55FB9B48298DA399007F814F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Guidomia/Preview Content\"";
+				DEVELOPMENT_TEAM = H488YFWX72;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banie.Guidomia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55FB9B49298DA399007F814F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Guidomia/Preview Content\"";
+				DEVELOPMENT_TEAM = H488YFWX72;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banie.Guidomia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		55FB9B4B298DA399007F814F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H488YFWX72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banie.GuidomiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Guidomia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Guidomia";
+			};
+			name = Debug;
+		};
+		55FB9B4C298DA399007F814F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H488YFWX72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banie.GuidomiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Guidomia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Guidomia";
+			};
+			name = Release;
+		};
+		55FB9B4E298DA399007F814F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H488YFWX72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banie.GuidomiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Guidomia;
+			};
+			name = Debug;
+		};
+		55FB9B4F298DA399007F814F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H488YFWX72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banie.GuidomiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Guidomia;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55FB9B19298DA397007F814F /* Build configuration list for PBXProject "Guidomia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FB9B45298DA399007F814F /* Debug */,
+				55FB9B46298DA399007F814F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55FB9B47298DA399007F814F /* Build configuration list for PBXNativeTarget "Guidomia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FB9B48298DA399007F814F /* Debug */,
+				55FB9B49298DA399007F814F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55FB9B4A298DA399007F814F /* Build configuration list for PBXNativeTarget "GuidomiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FB9B4B298DA399007F814F /* Debug */,
+				55FB9B4C298DA399007F814F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55FB9B4D298DA399007F814F /* Build configuration list for PBXNativeTarget "GuidomiaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FB9B4E298DA399007F814F /* Debug */,
+				55FB9B4F298DA399007F814F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55FB9B2C298DA398007F814F /* Guidomia.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55FB9B2D298DA398007F814F /* Guidomia.xcdatamodel */,
+			);
+			currentVersion = 55FB9B2D298DA398007F814F /* Guidomia.xcdatamodel */;
+			path = Guidomia.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 55FB9B16298DA397007F814F /* Project object */;
+}
