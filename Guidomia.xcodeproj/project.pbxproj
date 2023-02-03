@@ -16,6 +16,8 @@
 		55FB9B38298DA399007F814F /* GuidomiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B37298DA399007F814F /* GuidomiaTests.swift */; };
 		55FB9B42298DA399007F814F /* GuidomiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B41298DA399007F814F /* GuidomiaUITests.swift */; };
 		55FB9B44298DA399007F814F /* GuidomiaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B43298DA399007F814F /* GuidomiaUITestsLaunchTests.swift */; };
+		55FB9B6F298DAB92007F814F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B6E298DAB92007F814F /* MainView.swift */; };
+		55FB9B71298DADFA007F814F /* car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 55FB9B70298DADFA007F814F /* car_list.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		55FB9B3D298DA399007F814F /* GuidomiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuidomiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FB9B41298DA399007F814F /* GuidomiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaUITests.swift; sourceTree = "<group>"; };
 		55FB9B43298DA399007F814F /* GuidomiaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		55FB9B6E298DAB92007F814F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		55FB9B70298DADFA007F814F /* car_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = car_list.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,10 @@
 		55FB9B20298DA397007F814F /* Guidomia */ = {
 			isa = PBXGroup;
 			children = (
+				55FB9B6D298DAB7F007F814F /* Views */,
+				55FB9B6B298DAB52007F814F /* Resources */,
+				55FB9B6C298DAB68007F814F /* Storage */,
 				55FB9B21298DA397007F814F /* GuidomiaApp.swift */,
-				55FB9B23298DA397007F814F /* ContentView.swift */,
-				55FB9B25298DA398007F814F /* Assets.xcassets */,
-				55FB9B2A298DA398007F814F /* Persistence.swift */,
-				55FB9B2C298DA398007F814F /* Guidomia.xcdatamodeld */,
 				55FB9B27298DA398007F814F /* Preview Content */,
 			);
 			path = Guidomia;
@@ -131,6 +134,33 @@
 				55FB9B43298DA399007F814F /* GuidomiaUITestsLaunchTests.swift */,
 			);
 			path = GuidomiaUITests;
+			sourceTree = "<group>";
+		};
+		55FB9B6B298DAB52007F814F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B70298DADFA007F814F /* car_list.json */,
+				55FB9B25298DA398007F814F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		55FB9B6C298DAB68007F814F /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B2C298DA398007F814F /* Guidomia.xcdatamodeld */,
+				55FB9B2A298DA398007F814F /* Persistence.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		55FB9B6D298DAB7F007F814F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B6E298DAB92007F814F /* MainView.swift */,
+				55FB9B23298DA397007F814F /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FB9B29298DA398007F814F /* Preview Assets.xcassets in Resources */,
+				55FB9B71298DADFA007F814F /* car_list.json in Resources */,
 				55FB9B26298DA398007F814F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +297,7 @@
 				55FB9B2E298DA398007F814F /* Guidomia.xcdatamodeld in Sources */,
 				55FB9B2B298DA398007F814F /* Persistence.swift in Sources */,
 				55FB9B24298DA397007F814F /* ContentView.swift in Sources */,
+				55FB9B6F298DAB92007F814F /* MainView.swift in Sources */,
 				55FB9B22298DA397007F814F /* GuidomiaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,8 +463,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,8 +493,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,7 +518,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H488YFWX72;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.banie.GuidomiaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -504,7 +538,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H488YFWX72;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.banie.GuidomiaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -523,6 +557,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H488YFWX72;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.banie.GuidomiaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -541,6 +576,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H488YFWX72;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.banie.GuidomiaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
