@@ -38,12 +38,26 @@ struct CarListView: View {
                                         maxWidth: 150,
                                         maxHeight: 50
                                     )
-                                VStack {
+                                VStack(spacing: 2) {
                                     Text(carDetail.make + " - " + carDetail.model)
-                                        .font(.title3)
-                                    Text(String(carDetail.customerPrice))
                                         .font(.headline)
+                                        .foregroundColor(.secondary)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                    Text(String(format: "Price: %@k", String(Int(carDetail.customerPrice / 1000))))
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                    HStack(spacing: 2) {
+                                        let numOfStars: Int = carDetail.rating
+                                        ForEach(1...numOfStars, id: \.self) { _ in
+                                            Image(systemName: "star.fill")
+                                        }
+                                    }
+                                    .padding(.top, 5)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .foregroundColor(.yellow)
                                 }
+                                .padding(.leading, 10)
                             }
                             .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
                         }
