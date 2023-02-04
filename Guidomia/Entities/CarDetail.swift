@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CarDetail: Codable {
+struct CarDetail: Codable, Equatable {
     let model: String
     let make: String
     let customerPrice: Double
