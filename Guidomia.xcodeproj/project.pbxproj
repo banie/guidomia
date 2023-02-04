@@ -18,6 +18,12 @@
 		55FB9B44298DA399007F814F /* GuidomiaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B43298DA399007F814F /* GuidomiaUITestsLaunchTests.swift */; };
 		55FB9B6F298DAB92007F814F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B6E298DAB92007F814F /* MainView.swift */; };
 		55FB9B71298DADFA007F814F /* car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 55FB9B70298DADFA007F814F /* car_list.json */; };
+		55FB9B74298DBB39007F814F /* CarDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B73298DBB39007F814F /* CarDetail.swift */; };
+		55FB9B79298DC3FA007F814F /* LocalRequestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B78298DC3FA007F814F /* LocalRequestApi.swift */; };
+		55FB9B7B298DC410007F814F /* GetCarListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B7A298DC410007F814F /* GetCarListApi.swift */; };
+		55FB9B7D298DC484007F814F /* GetCarListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B7C298DC484007F814F /* GetCarListInteractor.swift */; };
+		55FB9B7F298DC6F6007F814F /* LocalRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B7E298DC6F6007F814F /* LocalRequestInteractor.swift */; };
+		55FB9B81298DD938007F814F /* GetFromLocalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B80298DD938007F814F /* GetFromLocalResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,12 @@
 		55FB9B43298DA399007F814F /* GuidomiaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		55FB9B6E298DAB92007F814F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		55FB9B70298DADFA007F814F /* car_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = car_list.json; sourceTree = "<group>"; };
+		55FB9B73298DBB39007F814F /* CarDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetail.swift; sourceTree = "<group>"; };
+		55FB9B78298DC3FA007F814F /* LocalRequestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRequestApi.swift; sourceTree = "<group>"; };
+		55FB9B7A298DC410007F814F /* GetCarListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarListApi.swift; sourceTree = "<group>"; };
+		55FB9B7C298DC484007F814F /* GetCarListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarListInteractor.swift; sourceTree = "<group>"; };
+		55FB9B7E298DC6F6007F814F /* LocalRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRequestInteractor.swift; sourceTree = "<group>"; };
+		55FB9B80298DD938007F814F /* GetFromLocalResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFromLocalResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,8 @@
 		55FB9B20298DA397007F814F /* Guidomia */ = {
 			isa = PBXGroup;
 			children = (
+				55FB9B75298DBC15007F814F /* Interactor */,
+				55FB9B72298DBB26007F814F /* Entities */,
 				55FB9B6D298DAB7F007F814F /* Views */,
 				55FB9B6B298DAB52007F814F /* Resources */,
 				55FB9B6C298DAB68007F814F /* Storage */,
@@ -161,6 +175,42 @@
 				55FB9B23298DA397007F814F /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		55FB9B72298DBB26007F814F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B73298DBB39007F814F /* CarDetail.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		55FB9B75298DBC15007F814F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B77298DC37A007F814F /* Base */,
+				55FB9B76298DC372007F814F /* Interfaces */,
+				55FB9B7C298DC484007F814F /* GetCarListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		55FB9B76298DC372007F814F /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B78298DC3FA007F814F /* LocalRequestApi.swift */,
+				55FB9B7A298DC410007F814F /* GetCarListApi.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		55FB9B77298DC37A007F814F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B7E298DC6F6007F814F /* LocalRequestInteractor.swift */,
+				55FB9B80298DD938007F814F /* GetFromLocalResource.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,9 +344,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FB9B79298DC3FA007F814F /* LocalRequestApi.swift in Sources */,
+				55FB9B7D298DC484007F814F /* GetCarListInteractor.swift in Sources */,
 				55FB9B2E298DA398007F814F /* Guidomia.xcdatamodeld in Sources */,
+				55FB9B81298DD938007F814F /* GetFromLocalResource.swift in Sources */,
+				55FB9B7B298DC410007F814F /* GetCarListApi.swift in Sources */,
 				55FB9B2B298DA398007F814F /* Persistence.swift in Sources */,
 				55FB9B24298DA397007F814F /* ContentView.swift in Sources */,
+				55FB9B7F298DC6F6007F814F /* LocalRequestInteractor.swift in Sources */,
+				55FB9B74298DBB39007F814F /* CarDetail.swift in Sources */,
 				55FB9B6F298DAB92007F814F /* MainView.swift in Sources */,
 				55FB9B22298DA397007F814F /* GuidomiaApp.swift in Sources */,
 			);
