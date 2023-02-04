@@ -16,3 +16,9 @@ struct CarDetail: Codable {
     let consList: [String]
     let rating: Int
 }
+
+extension CarDetail: Identifiable {
+    var id: String {
+        return model + "-" + make
+    }
+}

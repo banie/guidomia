@@ -8,11 +8,6 @@
 import Foundation
 
 class GetCarListInteractor: GetFromLocalResource, GetCarListApi {
-    func getListOfCarDetails() -> [CarDetail] {
-        <#code#>
-    }
-    
-
     init(localRequestApi: LocalRequestApi = LocalRequestInteractor()) {
         super.init(fileName: "car_list", localRequestApi: localRequestApi)
     }
@@ -22,4 +17,3 @@ class GetCarListInteractor: GetFromLocalResource, GetCarListApi {
         return carList
     }
 }
-

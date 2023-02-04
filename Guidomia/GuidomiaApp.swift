@@ -9,12 +9,18 @@ import SwiftUI
 
 @main
 struct GuidomiaApp: App {
-    let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            CarListView()
         }
     }
+    
+//    let persistenceController = PersistenceController.shared
+
+//    var body: some Scene {
+//        WindowGroup {
+//            ContentView()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+//        }
+//    }
 }
