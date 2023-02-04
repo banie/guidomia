@@ -24,15 +24,28 @@ struct CarListView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(
-                            minWidth: 0,
                             maxWidth: .infinity,
-                            minHeight: 0,
                             maxHeight: 200
                         )
                     List {
                         let carList = presenter.carList
                         ForEach(carList) { carDetail in
-                            Text(carDetail.model).font(.title)
+                            HStack {
+                                Image(carDetail.make + " - " + carDetail.model)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(
+                                        maxWidth: 150,
+                                        maxHeight: 50
+                                    )
+                                VStack {
+                                    Text(carDetail.make + " - " + carDetail.model)
+                                        .font(.title3)
+                                    Text(String(carDetail.customerPrice))
+                                        .font(.headline)
+                                }
+                            }
+                            .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
                         }
                     }
                     .frame(maxHeight: .infinity)
