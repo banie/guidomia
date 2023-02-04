@@ -25,6 +25,7 @@
 		55FB9B7F298DC6F6007F814F /* LocalRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B7E298DC6F6007F814F /* LocalRequestInteractor.swift */; };
 		55FB9B81298DD938007F814F /* GetFromLocalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B80298DD938007F814F /* GetFromLocalResource.swift */; };
 		55FB9B84298DE6D0007F814F /* CarListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B83298DE6D0007F814F /* CarListPresenter.swift */; };
+		55FB9B86298E30AA007F814F /* Colour.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FB9B85298E30AA007F814F /* Colour.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		55FB9B7E298DC6F6007F814F /* LocalRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRequestInteractor.swift; sourceTree = "<group>"; };
 		55FB9B80298DD938007F814F /* GetFromLocalResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFromLocalResource.swift; sourceTree = "<group>"; };
 		55FB9B83298DE6D0007F814F /* CarListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresenter.swift; sourceTree = "<group>"; };
+		55FB9B85298E30AA007F814F /* Colour.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colour.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			children = (
 				55FB9B70298DADFA007F814F /* car_list.json */,
 				55FB9B25298DA398007F814F /* Assets.xcassets */,
+				55FB9B85298E30AA007F814F /* Colour.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				55FB9B29298DA398007F814F /* Preview Assets.xcassets in Resources */,
 				55FB9B71298DADFA007F814F /* car_list.json in Resources */,
 				55FB9B26298DA398007F814F /* Assets.xcassets in Resources */,
+				55FB9B86298E30AA007F814F /* Colour.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
