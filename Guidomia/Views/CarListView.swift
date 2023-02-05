@@ -21,11 +21,23 @@ struct CarListView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 20)
                     List {
-                        Image("topHeader")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(maxWidth: .infinity, maxHeight: 200)
-                            .listRowInsets(EdgeInsets(top: 25, leading: 0, bottom: 25, trailing: 0))
+                        ZStack {
+                            Image("topHeader")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                            VStack(spacing: 10) {
+                                Text("Tacoma 2021")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.white)
+                                Text("Get yours now")
+                                    .font(.title)
+                                    .foregroundColor(.white)
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 30, trailing: 20))
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: 200)
+                        .listRowInsets(EdgeInsets(top: 25, leading: 0, bottom: 25, trailing: 0))
                         
                         VStack {
                             Text("Filters")
