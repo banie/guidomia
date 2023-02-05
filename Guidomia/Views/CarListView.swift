@@ -11,22 +11,18 @@ struct CarListView: View {
     @ObservedObject var presenter = CarListPresenter()
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color("appPrimary")
-                    .opacity(0.1)
-                    .ignoresSafeArea()
-                VStack{
-                    Rectangle()
-                        .frame(height: 0)
-                        .background(Color("appPrimary"))
-                    
+                VStack {
+                    Text("Guidomia")
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 20)
                     List {
                         Image("topHeader")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(maxWidth: .infinity, maxHeight: 200)
-                            .listRowInsets(EdgeInsets())
+                            .listRowInsets(EdgeInsets(top: 25, leading: 0, bottom: 25, trailing: 0))
                         
                         ForEach(presenter.items) { item in
                             VStack {
@@ -87,7 +83,7 @@ struct CarListView: View {
                                                 HStack {
                                                     Image(systemName: "circle.fill")
                                                         .resizable()
-                                                        .frame(maxWidth: 6, maxHeight: 6)
+                                                        .frame(minWidth: 4, maxWidth: 4, minHeight: 4, maxHeight: 4)
                                                         .foregroundColor(Color("appPrimary"))
                                                     Text(con)
                                                         .font(.body)
@@ -97,7 +93,6 @@ struct CarListView: View {
                                             }
                                         }
                                     }
-                                    .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 0))
                                 }
                             }
                             .onTapGesture {
@@ -108,22 +103,12 @@ struct CarListView: View {
                     .frame(maxHeight: .infinity)
                     .listStyle(.plain)
                 }
+                .background(Color("appPrimary"))
                 .frame(
                     maxWidth: .infinity,
                     maxHeight: .infinity,
                     alignment: .topLeading
                 )
-            }
-            .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Text("Guidomia")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                }
-                
-            }
-        }
     }
 }
 
