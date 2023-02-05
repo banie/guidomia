@@ -20,24 +20,21 @@ struct CarListView: View {
                     Rectangle()
                         .frame(height: 0)
                         .background(Color("appPrimary"))
-                    Image("topHeader")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(
-                            maxWidth: .infinity,
-                            maxHeight: 200
-                        )
+                    
                     List {
+                        Image("topHeader")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(maxWidth: .infinity, maxHeight: 200)
+                            .listRowInsets(EdgeInsets())
+                        
                         ForEach(presenter.items) { item in
                             VStack {
                                 HStack {
                                     Image(item.detail.make + " - " + item.detail.model)
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(
-                                            maxWidth: 150,
-                                            maxHeight: 50
-                                        )
+                                        .frame(maxWidth: 150, maxHeight: 50)
                                     VStack(spacing: 2) {
                                         Text(item.detail.make + " - " + item.detail.model)
                                             .font(.title2)
@@ -103,7 +100,6 @@ struct CarListView: View {
                                     .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 0))
                                 }
                             }
-                            .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
                             .onTapGesture {
                                 presenter.select(item)
                             }
