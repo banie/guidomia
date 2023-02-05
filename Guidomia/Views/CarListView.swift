@@ -10,8 +10,8 @@ import SwiftUI
 struct CarListView: View {
     @ObservedObject var presenter = CarListPresenter()
     
-    @State private var selectedMake = ""
-    @State private var selectedModel = ""
+    @State private var selectedMake = CarListPresenter.anySelection
+    @State private var selectedModel = CarListPresenter.anySelection
     
     var body: some View {
                 VStack {
@@ -40,6 +40,9 @@ struct CarListView: View {
                                 }
                             }
                             .pickerStyle(.menu)
+                            .onChange(of: selectedMake) { make in
+                                presenter.selectedMake = make
+                            }
                             
                             Picker("Any model", selection: $selectedModel) {
                                 ForEach(presenter.availableModels, id: \.self) { model in
@@ -47,7 +50,11 @@ struct CarListView: View {
                                         .font(.headline)
                                         .tag(model)
                                 }
-                            }.pickerStyle(.menu)
+                            }
+                            .pickerStyle(.menu)
+                            .onChange(of: selectedModel) { model in
+                                presenter.selectedModel = model
+                            }
                         }
                         
                         ForEach(presenter.items) { item in

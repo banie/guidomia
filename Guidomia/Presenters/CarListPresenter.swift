@@ -11,23 +11,30 @@ class CarListPresenter: ObservableObject {
     
     @Published var items: [ListItem]
     
-    var availableMakes: [String] {
-        items.map { item in
-            item.detail.make
+    static var anySelection = "All"
+    var selectedMake: String {
+        didSet {
+            updateBasedOnFilter()
         }
     }
-    
-    var availableModels: [String] {
-        items.map { item in
-            item.detail.model
+    var selectedModel: String {
+        didSet {
+            updateBasedOnFilter()
         }
     }
-    
+    private(set) var availableMakes: [String]
+    private(set) var availableModels: [String]
+    private let allItems: [ListItem]
+
     init() {
-        
+        selectedMake = CarListPresenter.anySelection
+        selectedModel = CarListPresenter.anySelection
+        availableMakes = [CarListPresenter.anySelection]
+        availableModels = [CarListPresenter.anySelection]
+
         do {
             let carList = try GetCarListInteractor().getListOfCarDetails() ?? []
-            items = carList.map { carDetail in
+            allItems = carList.map { carDetail in
                 let cleanedPros = carDetail.prosList.map { pro in
                     pro.trimmingCharacters(in: .whitespacesAndNewlines)
                 }.filter { pro in
@@ -43,18 +50,46 @@ class CarListPresenter: ObservableObject {
                 
                 return ListItem(detail: cleanCarDetail)
             }
-            if var firstItem = items.first {
-                firstItem.selected = true
-                items[0] = firstItem
-            }
         } catch {
-            items = []
+            allItems = []
         }
+        
+        items = allItems
+        if var firstItem = items.first {
+            firstItem.selected = true
+            items[0] = firstItem
+        }
+
+        availableMakes.append(contentsOf: items.map { item in
+            item.detail.make
+        })
+
+        availableModels.append(contentsOf: items.map { item in
+            item.detail.model
+        })
     }
     
     func select(_ item: ListItem) {
         for i in 0..<items.count {
             items[i].selected = items[i].id == item.id ? true : false
+        }
+    }
+    
+    func updateBasedOnFilter() {
+        if selectedMake == CarListPresenter.anySelection && selectedModel == CarListPresenter.anySelection {
+            items = allItems
+        } else if selectedModel == CarListPresenter.anySelection {
+            items = allItems.filter{ item in
+                item.detail.make == selectedMake
+            }
+        } else if selectedMake == CarListPresenter.anySelection {
+            items = allItems.filter{ item in
+                item.detail.model == selectedModel
+            }
+        } else {
+            items = allItems.filter{ item in
+                item.detail.model == selectedModel && item.detail.make == selectedMake
+            }
         }
     }
 }
