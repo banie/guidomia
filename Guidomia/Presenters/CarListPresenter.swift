@@ -11,7 +11,20 @@ class CarListPresenter: ObservableObject {
     
     @Published var items: [ListItem]
     
+    var availableMakes: [String] {
+        items.map { item in
+            item.detail.make
+        }
+    }
+    
+    var availableModels: [String] {
+        items.map { item in
+            item.detail.model
+        }
+    }
+    
     init() {
+        
         do {
             let carList = try GetCarListInteractor().getListOfCarDetails() ?? []
             items = carList.map { carDetail in

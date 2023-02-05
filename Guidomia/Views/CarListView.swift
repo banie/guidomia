@@ -10,6 +10,9 @@ import SwiftUI
 struct CarListView: View {
     @ObservedObject var presenter = CarListPresenter()
     
+    @State private var selectedMake = ""
+    @State private var selectedModel = ""
+    
     var body: some View {
                 VStack {
                     Text("Guidomia")
@@ -23,6 +26,29 @@ struct CarListView: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(maxWidth: .infinity, maxHeight: 200)
                             .listRowInsets(EdgeInsets(top: 25, leading: 0, bottom: 25, trailing: 0))
+                        
+                        VStack {
+                            Text("Filters")
+                                .font(.title)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            
+                            Picker("Any make", selection: $selectedMake) {
+                                ForEach(presenter.availableMakes, id: \.self) { make in
+                                    Text(make)
+                                        .font(.headline)
+                                        .tag(make)
+                                }
+                            }
+                            .pickerStyle(.menu)
+                            
+                            Picker("Any model", selection: $selectedModel) {
+                                ForEach(presenter.availableModels, id: \.self) { model in
+                                    Text(model)
+                                        .font(.headline)
+                                        .tag(model)
+                                }
+                            }.pickerStyle(.menu)
+                        }
                         
                         ForEach(presenter.items) { item in
                             VStack {
@@ -52,6 +78,7 @@ struct CarListView: View {
                                     }
                                     .padding(.leading, 10)
                                 }
+
                                 if item.selected {
                                     VStack {
                                         let pros: [String] = item.detail.prosList
