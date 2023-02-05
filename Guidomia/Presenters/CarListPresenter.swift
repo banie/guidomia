@@ -51,6 +51,7 @@ class CarListPresenter: ObservableObject {
                 return ListItem(detail: cleanCarDetail)
             }
         } catch {
+            print("not able to fetch from json file, error: \(error)")
             allItems = []
         }
         
@@ -95,7 +96,7 @@ class CarListPresenter: ObservableObject {
 }
 
 struct ListItem: Identifiable {
-    var id: String {
+    var id: UUID {
         detail.id
     }
     
