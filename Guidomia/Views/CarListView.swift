@@ -30,7 +30,9 @@ struct CarListView: View {
                         VStack {
                             Text("Filters")
                                 .font(.title)
+                                .foregroundColor(.white)
                                 .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 20))
                             
                             Picker("Any make", selection: $selectedMake) {
                                 ForEach(presenter.availableMakes, id: \.self) { make in
@@ -40,6 +42,9 @@ struct CarListView: View {
                                 }
                             }
                             .pickerStyle(.menu)
+                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                            .tint(.white)
+                            .foregroundColor(.white)
                             .onChange(of: selectedMake) { make in
                                 presenter.selectedMake = make
                             }
@@ -52,10 +57,15 @@ struct CarListView: View {
                                 }
                             }
                             .pickerStyle(.menu)
+                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                            .tint(.white)
+                            .foregroundColor(.white)
                             .onChange(of: selectedModel) { model in
                                 presenter.selectedModel = model
                             }
                         }
+                        .background(Color("darkGray"))
+                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         
                         ForEach(presenter.items) { item in
                             VStack {
