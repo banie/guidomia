@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		55A5311A29915A2E002FB263 /* LocalRequestApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5311929915A2E002FB263 /* LocalRequestApiMock.swift */; };
+		55A5311C299165D3002FB263 /* GetCarListApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5311B299165D3002FB263 /* GetCarListApiMock.swift */; };
+		55A5311E29916767002FB263 /* CarListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5311D29916767002FB263 /* CarListPresenterTests.swift */; };
 		55FB9B22298DA397007F814F /* GuidomiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B21298DA397007F814F /* GuidomiaApp.swift */; };
 		55FB9B24298DA397007F814F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B23298DA397007F814F /* ContentView.swift */; };
 		55FB9B26298DA398007F814F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FB9B25298DA398007F814F /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		55A5311929915A2E002FB263 /* LocalRequestApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRequestApiMock.swift; sourceTree = "<group>"; };
+		55A5311B299165D3002FB263 /* GetCarListApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarListApiMock.swift; sourceTree = "<group>"; };
+		55A5311D29916767002FB263 /* CarListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresenterTests.swift; sourceTree = "<group>"; };
 		55FB9B1E298DA397007F814F /* Guidomia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidomia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FB9B21298DA397007F814F /* GuidomiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaApp.swift; sourceTree = "<group>"; };
 		55FB9B23298DA397007F814F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				55A5311929915A2E002FB263 /* LocalRequestApiMock.swift */,
+				55A5311B299165D3002FB263 /* GetCarListApiMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			children = (
 				55A5311829915A10002FB263 /* Mocks */,
 				55FB9B37298DA399007F814F /* GetCarListFromResourceTests.swift */,
+				55A5311D29916767002FB263 /* CarListPresenterTests.swift */,
 			);
 			path = GuidomiaTests;
 			sourceTree = "<group>";
@@ -433,8 +439,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55A5311C299165D3002FB263 /* GetCarListApiMock.swift in Sources */,
 				55A5311A29915A2E002FB263 /* LocalRequestApiMock.swift in Sources */,
 				55FB9B38298DA399007F814F /* GetCarListFromResourceTests.swift in Sources */,
+				55A5311E29916767002FB263 /* CarListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

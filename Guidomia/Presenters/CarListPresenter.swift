@@ -107,7 +107,7 @@ class CarListPresenter: ObservableObject {
         }
     }
     
-    func updateBasedOnFilter() {
+    private func updateBasedOnFilter() {
         if selectedMake == CarListPresenter.anySelection && selectedModel == CarListPresenter.anySelection {
             items = allItems
         } else if selectedModel == CarListPresenter.anySelection {
