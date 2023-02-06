@@ -9,19 +9,25 @@ import Foundation
 import CoreData
 
 class GetCarListFromCoreData: GetCarListApi {
+    let objectContext: NSManagedObjectContext
+    
+    init(objectContext: NSManagedObjectContext) {
+        self.objectContext = objectContext
+    }
+
     func getListOfCarDetails() throws -> [CarDetail]? {
         let carManagedObjects: [CarDetailManagedObject]
-        let fetchRequest: NSFetchRequest<CarDetailManagedObject> = CarDetailManagedObject.fetchRequest()
         let sortByMake = NSSortDescriptor(key: #keyPath(CarDetailManagedObject.make), ascending: true)
+        let fetchRequest: NSFetchRequest<CarDetailManagedObject> = CarDetailManagedObject.fetchRequest()
         fetchRequest.sortDescriptors = [sortByMake]
+        
         do {
-            carManagedObjects = try PersistenceController.shared.container.viewContext.fetch(fetchRequest)
+            carManagedObjects = try objectContext.fetch(fetchRequest)
         } catch let error as NSError {
             print("Fetch error: \(error) description: \(error.userInfo)")
             carManagedObjects = []
         }
 
-        
         let carDetails = carManagedObjects.map { carManagedObject in
             let prosList = (carManagedObject.prosList as? Set<ProReasonManagedObject>)?.map {
                 $0.reason
