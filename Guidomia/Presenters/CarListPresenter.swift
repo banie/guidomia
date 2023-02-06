@@ -25,33 +25,29 @@ class CarListPresenter: ObservableObject {
     private(set) var availableMakes: [String]
     private(set) var availableModels: [String]
     private let allItems: [ListItem]
+    
+    private let getCarListFromResource: GetCarListApi
+    private let getCarListFromCoreData: GetCarListApi
+    private let saveCarListToCoreData: SaveCarListApi
 
-    init() {
+    init(getCarListFromResource: GetCarListApi = GetCarListFromResource(),
+         getCarListFromCoreData: GetCarListApi = GetCarListFromCoreData(objectContext: PersistenceController.shared.viewContext),
+         saveCarListToCoreData: SaveCarListApi = SaveCarListToCoreData(objectContext: PersistenceController.shared.backgroundContext)) {
+        
+        self.getCarListFromResource = getCarListFromResource
+        self.getCarListFromCoreData = getCarListFromCoreData
+        self.saveCarListToCoreData = saveCarListToCoreData
+        
         selectedMake = CarListPresenter.anySelection
         selectedModel = CarListPresenter.anySelection
         availableMakes = [CarListPresenter.anySelection]
         availableModels = [CarListPresenter.anySelection]
 
         do {
-            let carList = try GetCarListFromResource().getListOfCarDetails() ?? []
-            allItems = carList.map { carDetail in
-                let cleanedPros = carDetail.prosList.map { pro in
-                    pro.trimmingCharacters(in: .whitespacesAndNewlines)
-                }.filter { pro in
-                    pro.isEmpty == false
-                }
-                let cleanedCons = carDetail.consList.map { con in
-                    con.trimmingCharacters(in: .whitespacesAndNewlines)
-                }.filter { con in
-                    con.isEmpty == false
-                }
-                
-                let cleanCarDetail = CarDetail(model: carDetail.model, make: carDetail.make, customerPrice: carDetail.customerPrice, marketPrice: carDetail.marketPrice, prosList: cleanedPros, consList: cleanedCons, rating: carDetail.rating)
-                
-                return ListItem(detail: cleanCarDetail)
-            }
+            let carList = try CarListPresenter.getCarList(getCarListFromResource, getCarListFromCoreData, saveCarListToCoreData)
+            allItems = CarListPresenter.process(carList)
         } catch {
-            print("not able to fetch from json file, error: \(error)")
+            print("not able to fetch car list, error: \(error)")
             allItems = []
         }
         
@@ -68,6 +64,41 @@ class CarListPresenter: ObservableObject {
         availableModels.append(contentsOf: items.map { item in
             item.detail.model
         })
+    }
+    
+    private static func getCarList(_ getCarListFromResource: GetCarListApi,
+                            _ getCarListFromCoreData: GetCarListApi,
+                            _ saveCarListToCoreData: SaveCarListApi) throws -> [CarDetail] {
+        let carList: [CarDetail]
+        let carListFromCoreData = try getCarListFromCoreData.getListOfCarDetails() ?? []
+        
+        if carListFromCoreData.isEmpty {
+            carList = try getCarListFromResource.getListOfCarDetails() ?? []
+            try saveCarListToCoreData.save(carList)
+        } else {
+            carList = carListFromCoreData
+        }
+        
+        return carList
+    }
+    
+    private static func process(_ carList: [CarDetail]) -> [ListItem] {
+        return carList.map { carDetail in
+            let cleanedPros = carDetail.prosList.map { pro in
+                pro.trimmingCharacters(in: .whitespacesAndNewlines)
+            }.filter { pro in
+                pro.isEmpty == false
+            }
+            let cleanedCons = carDetail.consList.map { con in
+                con.trimmingCharacters(in: .whitespacesAndNewlines)
+            }.filter { con in
+                con.isEmpty == false
+            }
+            
+            let cleanCarDetail = CarDetail(model: carDetail.model, make: carDetail.make, customerPrice: carDetail.customerPrice, marketPrice: carDetail.marketPrice, prosList: cleanedPros, consList: cleanedCons, rating: carDetail.rating)
+            
+            return ListItem(detail: cleanCarDetail)
+        }
     }
     
     func select(_ item: ListItem) {
