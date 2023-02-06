@@ -33,7 +33,7 @@ class CarListPresenter: ObservableObject {
         availableModels = [CarListPresenter.anySelection]
 
         do {
-            let carList = try GetCarListInteractor().getListOfCarDetails() ?? []
+            let carList = try GetCarListFromResource().getListOfCarDetails() ?? []
             allItems = carList.map { carDetail in
                 let cleanedPros = carDetail.prosList.map { pro in
                     pro.trimmingCharacters(in: .whitespacesAndNewlines)

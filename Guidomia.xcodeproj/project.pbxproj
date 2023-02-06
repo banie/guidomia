@@ -21,11 +21,18 @@
 		55FB9B74298DBB39007F814F /* CarDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B73298DBB39007F814F /* CarDetail.swift */; };
 		55FB9B79298DC3FA007F814F /* LocalRequestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B78298DC3FA007F814F /* LocalRequestApi.swift */; };
 		55FB9B7B298DC410007F814F /* GetCarListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B7A298DC410007F814F /* GetCarListApi.swift */; };
-		55FB9B7D298DC484007F814F /* GetCarListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B7C298DC484007F814F /* GetCarListInteractor.swift */; };
+		55FB9B7D298DC484007F814F /* GetCarListFromResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B7C298DC484007F814F /* GetCarListFromResource.swift */; };
 		55FB9B7F298DC6F6007F814F /* LocalRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B7E298DC6F6007F814F /* LocalRequestInteractor.swift */; };
 		55FB9B81298DD938007F814F /* GetFromLocalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B80298DD938007F814F /* GetFromLocalResource.swift */; };
 		55FB9B84298DE6D0007F814F /* CarListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B83298DE6D0007F814F /* CarListPresenter.swift */; };
 		55FB9B86298E30AA007F814F /* Colour.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FB9B85298E30AA007F814F /* Colour.xcassets */; };
+		55FB9B9C2990654C007F814F /* ProReasonManagedObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B962990654C007F814F /* ProReasonManagedObject+CoreDataClass.swift */; };
+		55FB9B9D2990654C007F814F /* ProReasonManagedObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B972990654C007F814F /* ProReasonManagedObject+CoreDataProperties.swift */; };
+		55FB9B9E2990654C007F814F /* CarDetailManagedObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B982990654C007F814F /* CarDetailManagedObject+CoreDataProperties.swift */; };
+		55FB9B9F2990654C007F814F /* CarDetailManagedObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B992990654C007F814F /* CarDetailManagedObject+CoreDataClass.swift */; };
+		55FB9BA02990654C007F814F /* ConReasonManagedObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B9A2990654C007F814F /* ConReasonManagedObject+CoreDataClass.swift */; };
+		55FB9BA12990654C007F814F /* ConReasonManagedObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B9B2990654C007F814F /* ConReasonManagedObject+CoreDataProperties.swift */; };
+		55FB9BA3299067AD007F814F /* GetCarListFromCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9BA2299067AD007F814F /* GetCarListFromCoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,11 +70,18 @@
 		55FB9B73298DBB39007F814F /* CarDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetail.swift; sourceTree = "<group>"; };
 		55FB9B78298DC3FA007F814F /* LocalRequestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRequestApi.swift; sourceTree = "<group>"; };
 		55FB9B7A298DC410007F814F /* GetCarListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarListApi.swift; sourceTree = "<group>"; };
-		55FB9B7C298DC484007F814F /* GetCarListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarListInteractor.swift; sourceTree = "<group>"; };
+		55FB9B7C298DC484007F814F /* GetCarListFromResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarListFromResource.swift; sourceTree = "<group>"; };
 		55FB9B7E298DC6F6007F814F /* LocalRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRequestInteractor.swift; sourceTree = "<group>"; };
 		55FB9B80298DD938007F814F /* GetFromLocalResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFromLocalResource.swift; sourceTree = "<group>"; };
 		55FB9B83298DE6D0007F814F /* CarListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresenter.swift; sourceTree = "<group>"; };
 		55FB9B85298E30AA007F814F /* Colour.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colour.xcassets; sourceTree = "<group>"; };
+		55FB9B962990654C007F814F /* ProReasonManagedObject+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProReasonManagedObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		55FB9B972990654C007F814F /* ProReasonManagedObject+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProReasonManagedObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		55FB9B982990654C007F814F /* CarDetailManagedObject+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarDetailManagedObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		55FB9B992990654C007F814F /* CarDetailManagedObject+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarDetailManagedObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		55FB9B9A2990654C007F814F /* ConReasonManagedObject+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConReasonManagedObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		55FB9B9B2990654C007F814F /* ConReasonManagedObject+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConReasonManagedObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		55FB9BA2299067AD007F814F /* GetCarListFromCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarListFromCoreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +182,7 @@
 		55FB9B6C298DAB68007F814F /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				55FB9B95299064E4007F814F /* ManagedObjects */,
 				55FB9B2C298DA398007F814F /* Guidomia.xcdatamodeld */,
 				55FB9B2A298DA398007F814F /* Persistence.swift */,
 			);
@@ -196,7 +211,8 @@
 			children = (
 				55FB9B77298DC37A007F814F /* Base */,
 				55FB9B76298DC372007F814F /* Interfaces */,
-				55FB9B7C298DC484007F814F /* GetCarListInteractor.swift */,
+				55FB9B7C298DC484007F814F /* GetCarListFromResource.swift */,
+				55FB9BA2299067AD007F814F /* GetCarListFromCoreData.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -225,6 +241,19 @@
 				55FB9B83298DE6D0007F814F /* CarListPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		55FB9B95299064E4007F814F /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				55FB9B992990654C007F814F /* CarDetailManagedObject+CoreDataClass.swift */,
+				55FB9B982990654C007F814F /* CarDetailManagedObject+CoreDataProperties.swift */,
+				55FB9B9A2990654C007F814F /* ConReasonManagedObject+CoreDataClass.swift */,
+				55FB9B9B2990654C007F814F /* ConReasonManagedObject+CoreDataProperties.swift */,
+				55FB9B962990654C007F814F /* ProReasonManagedObject+CoreDataClass.swift */,
+				55FB9B972990654C007F814F /* ProReasonManagedObject+CoreDataProperties.swift */,
+			);
+			path = ManagedObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,17 +389,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FB9B79298DC3FA007F814F /* LocalRequestApi.swift in Sources */,
-				55FB9B7D298DC484007F814F /* GetCarListInteractor.swift in Sources */,
+				55FB9BA12990654C007F814F /* ConReasonManagedObject+CoreDataProperties.swift in Sources */,
+				55FB9B7D298DC484007F814F /* GetCarListFromResource.swift in Sources */,
+				55FB9B9D2990654C007F814F /* ProReasonManagedObject+CoreDataProperties.swift in Sources */,
 				55FB9B2E298DA398007F814F /* Guidomia.xcdatamodeld in Sources */,
 				55FB9B81298DD938007F814F /* GetFromLocalResource.swift in Sources */,
 				55FB9B7B298DC410007F814F /* GetCarListApi.swift in Sources */,
+				55FB9B9F2990654C007F814F /* CarDetailManagedObject+CoreDataClass.swift in Sources */,
 				55FB9B2B298DA398007F814F /* Persistence.swift in Sources */,
 				55FB9B24298DA397007F814F /* ContentView.swift in Sources */,
 				55FB9B7F298DC6F6007F814F /* LocalRequestInteractor.swift in Sources */,
 				55FB9B74298DBB39007F814F /* CarDetail.swift in Sources */,
 				55FB9B6F298DAB92007F814F /* CarListView.swift in Sources */,
+				55FB9BA02990654C007F814F /* ConReasonManagedObject+CoreDataClass.swift in Sources */,
+				55FB9B9C2990654C007F814F /* ProReasonManagedObject+CoreDataClass.swift in Sources */,
 				55FB9B22298DA397007F814F /* GuidomiaApp.swift in Sources */,
+				55FB9BA3299067AD007F814F /* GetCarListFromCoreData.swift in Sources */,
 				55FB9B84298DE6D0007F814F /* CarListPresenter.swift in Sources */,
+				55FB9B9E2990654C007F814F /* CarDetailManagedObject+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
