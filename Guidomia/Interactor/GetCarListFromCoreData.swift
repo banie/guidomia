@@ -35,7 +35,7 @@ class GetCarListFromCoreData: GetCarListApi {
             let consList = (carManagedObject.consList as? Set<ConReasonManagedObject>)?.map {
                 $0.reason
             } ?? []
-            return CarDetail(id: carManagedObject.id, model: carManagedObject.model, make: carManagedObject.make, customerPrice: Double(carManagedObject.customerPrice), marketPrice: Double(carManagedObject.marketPrice), prosList: prosList, consList: consList, rating: carManagedObject.rating)
+            return CarDetail(id: carManagedObject.id, model: carManagedObject.model, make: carManagedObject.make, customerPrice: Double(carManagedObject.customerPrice), marketPrice: Double(carManagedObject.marketPrice), prosList: prosList, consList: consList, rating: Int(carManagedObject.rating))
         }
         
         return carDetails

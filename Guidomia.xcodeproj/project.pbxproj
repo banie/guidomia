@@ -33,6 +33,8 @@
 		55FB9BA02990654C007F814F /* ConReasonManagedObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B9A2990654C007F814F /* ConReasonManagedObject+CoreDataClass.swift */; };
 		55FB9BA12990654C007F814F /* ConReasonManagedObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9B9B2990654C007F814F /* ConReasonManagedObject+CoreDataProperties.swift */; };
 		55FB9BA3299067AD007F814F /* GetCarListFromCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9BA2299067AD007F814F /* GetCarListFromCoreData.swift */; };
+		55FB9BA52990960B007F814F /* SaveCarListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9BA42990960B007F814F /* SaveCarListApi.swift */; };
+		55FB9BA729909687007F814F /* SaveCarListToCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB9BA629909687007F814F /* SaveCarListToCoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		55FB9B9A2990654C007F814F /* ConReasonManagedObject+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConReasonManagedObject+CoreDataClass.swift"; sourceTree = "<group>"; };
 		55FB9B9B2990654C007F814F /* ConReasonManagedObject+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConReasonManagedObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		55FB9BA2299067AD007F814F /* GetCarListFromCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarListFromCoreData.swift; sourceTree = "<group>"; };
+		55FB9BA42990960B007F814F /* SaveCarListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCarListApi.swift; sourceTree = "<group>"; };
+		55FB9BA629909687007F814F /* SaveCarListToCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCarListToCoreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,7 @@
 				55FB9B76298DC372007F814F /* Interfaces */,
 				55FB9B7C298DC484007F814F /* GetCarListFromResource.swift */,
 				55FB9BA2299067AD007F814F /* GetCarListFromCoreData.swift */,
+				55FB9BA629909687007F814F /* SaveCarListToCoreData.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			children = (
 				55FB9B78298DC3FA007F814F /* LocalRequestApi.swift */,
 				55FB9B7A298DC410007F814F /* GetCarListApi.swift */,
+				55FB9BA42990960B007F814F /* SaveCarListApi.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FB9B79298DC3FA007F814F /* LocalRequestApi.swift in Sources */,
+				55FB9BA729909687007F814F /* SaveCarListToCoreData.swift in Sources */,
 				55FB9BA12990654C007F814F /* ConReasonManagedObject+CoreDataProperties.swift in Sources */,
 				55FB9B7D298DC484007F814F /* GetCarListFromResource.swift in Sources */,
 				55FB9B9D2990654C007F814F /* ProReasonManagedObject+CoreDataProperties.swift in Sources */,
@@ -401,6 +408,7 @@
 				55FB9B7F298DC6F6007F814F /* LocalRequestInteractor.swift in Sources */,
 				55FB9B74298DBB39007F814F /* CarDetail.swift in Sources */,
 				55FB9B6F298DAB92007F814F /* CarListView.swift in Sources */,
+				55FB9BA52990960B007F814F /* SaveCarListApi.swift in Sources */,
 				55FB9BA02990654C007F814F /* ConReasonManagedObject+CoreDataClass.swift in Sources */,
 				55FB9B9C2990654C007F814F /* ProReasonManagedObject+CoreDataClass.swift in Sources */,
 				55FB9B22298DA397007F814F /* GuidomiaApp.swift in Sources */,

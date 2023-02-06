@@ -11,6 +11,7 @@ struct PersistenceController {
     static let shared = PersistenceController()
 
     let container: NSPersistentContainer
+    let backgroundContext: NSManagedObjectContext
     var viewContext: NSManagedObjectContext {
         return container.viewContext
     }
@@ -26,6 +27,7 @@ struct PersistenceController {
             }
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
+        backgroundContext = container.newBackgroundContext()
     }
     
     static var preview: PersistenceController = {

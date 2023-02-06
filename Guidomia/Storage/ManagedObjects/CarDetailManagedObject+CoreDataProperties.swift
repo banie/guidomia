@@ -21,7 +21,7 @@ extension CarDetailManagedObject {
     @NSManaged public var customerPrice: Int64
     @NSManaged public var marketPrice: Int64
     @NSManaged public var id: UUID
-    @NSManaged public var rating: Int
+    @NSManaged public var rating: Int16
     @NSManaged public var prosList: NSSet?
     @NSManaged public var consList: NSSet?
 
